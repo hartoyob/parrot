@@ -11,6 +11,7 @@ RUN 	apt-get update && \
 	parrot-mini \
 	parrot-tools-cloud \
 	parrot-menu \
+	ipcalc \
 	man && \
  	apt-get -y autoremove
 
