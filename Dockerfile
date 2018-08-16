@@ -12,6 +12,7 @@ RUN 	apt-get update && \
 	parrot-tools-cloud \
 	parrot-menu \
 	ipcalc \
+	mtr-tiny \
 	man && \
  	apt-get -y autoremove
 
