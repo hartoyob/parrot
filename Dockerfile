@@ -11,11 +11,12 @@ RUN 	apt-get update && \
 	parrot-mini \
 	parrot-tools-cloud \
 	parrot-menu \
-	parrot-core \
 	ipcalc \
 	mtr-tiny \
 	vim \
 	man && \
  	apt-get -y autoremove
+
+ADD https://raw.githubusercontent.com/ParrotSec/parrot-core/master/parrot-core/root/.bashrc /root/.bashrc
 
 ENTRYPOINT bash $@
