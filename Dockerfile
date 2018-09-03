@@ -13,6 +13,7 @@ RUN 	apt-get update && \
 	parrot-menu \
 	ipcalc \
 	mtr-tiny \
+	vim \
 	man && \
  	apt-get -y autoremove
 
