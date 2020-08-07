@@ -1,4 +1,4 @@
-FROM parrotsec/parrot:latest
+FROM parrotsec/security:latest
 MAINTAINER suntzu (suntzu@theartofwar.org)
 ENV DEBIAN_FRONTEND noninteractive
 
