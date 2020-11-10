@@ -14,6 +14,7 @@ RUN 	apt-get update && \
 		ipcalc \
 		mtr-tiny \
 		vim \
+		burpsuite \
 		man && \
  		apt-get -y autoremove
 
