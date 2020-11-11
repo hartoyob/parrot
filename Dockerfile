@@ -16,6 +16,7 @@ RUN 	apt-get update && \
 		vim \
 		dirbuster \
 		gobuster \
+		enum4linux \
 		man && \
  		apt-get -y autoremove
 
