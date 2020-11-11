@@ -14,7 +14,6 @@ RUN 	apt-get update && \
 		ipcalc \
 		mtr-tiny \
 		vim \
-		burpsuite \
 		dirbuster \
 		gobuster \
 		man && \
