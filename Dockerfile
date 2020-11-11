@@ -15,6 +15,8 @@ RUN 	apt-get update && \
 		mtr-tiny \
 		vim \
 		burpsuite \
+		dirbuster \
+		gobuster \
 		man && \
  		apt-get -y autoremove
 
