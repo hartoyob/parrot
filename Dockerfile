@@ -17,6 +17,7 @@ RUN 	apt-get update && \
 		dirbuster \
 		gobuster \
 		enum4linux \
+		exploitdb \
 		man && \
  		apt-get -y autoremove
 
