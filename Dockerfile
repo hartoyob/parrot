@@ -13,7 +13,6 @@ RUN 	apt-get update && \
 		parrot-menu \
 		ipcalc \
 		mtr-tiny \
-		vim \
 		dirbuster \
 		gobuster \
 		enum4linux \
