@@ -18,7 +18,6 @@ RUN 	apt-get update && \
 		gobuster \
 		enum4linux \
 		exploitdb \
-		hydra \
 		man && \
  		apt-get -y autoremove
 
