@@ -1,25 +1,25 @@
-FROM parrotsec/security:latest
+FROM parrotsec/core:rolling
 MAINTAINER suntzu (suntzu@theartofwar.org)
 ENV DEBIAN_FRONTEND noninteractive
 
 # Install components
-RUN 	apt-get update && \
-		apt-get -y dist-upgrade && \
-		apt-get -y install parrot-pico \
-		metasploit-framework \
-		postgresql \
-		parrot-mini \
-		parrot-tools-cloud \
-		parrot-menu \
+
+RUN apt-get update; apt-get -y dist-upgrade
+RUN		apt-get -y install \
+		socat \
+		netcat \
 		ipcalc \
 		mtr-tiny \
 		vim \
-		dirbuster \
-		gobuster \
-		enum4linux \
-		exploitdb \
-		man && \
- 		apt-get -y autoremove
+		man
+RUN		apt-get -y install \
+		metasploit-framework \
+                postgresql \
+                dirbuster \
+                gobuster \
+                enum4linux \
+		exploitdb 
+RUN 		apt-get -y autoremove
 
 ADD https://raw.githubusercontent.com/ParrotSec/parrot-core/master/parrot-core/root/.bashrc /root/.bashrc
 

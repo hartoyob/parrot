@@ -1,0 +1,20 @@
+#parrot-mini \
+#parrot-tools-cloud \
+#parrot-menu \
+
+
+RUN             apt-get -y install \
+                socat \
+                netcat \
+                metasploit-framework \
+                postgresql \
+                ipcalc \
+                mtr-tiny \
+                vim \
+                dirbuster \
+                gobuster \
+                enum4linux \
+                exploitdb \
+                man && \
+                apt-get -y autoremove
+
