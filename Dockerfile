@@ -1,4 +1,4 @@
-FROM parrotsec/core:rolling
+FROM parrotsec/core:latest
 MAINTAINER suntzu (suntzu@theartofwar.org)
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -14,12 +14,31 @@ RUN		apt-get -y install \
 		man
 RUN		apt-get -y install \
 		metasploit-framework \
-                postgresql \
-                dirbuster \
-                gobuster \
-                enum4linux \
+		postgresql \
+		dirbuster \
+		gobuster \
+		enum4linux \
 		exploitdb 
-RUN 		apt-get -y autoremove
+RUN		apt-get -y install \
+#		seclists \
+		curl \
+		enum4linux \
+		gobuster \
+		nbtscan \
+ 		nikto \
+		nmap \
+		onesixtyone \
+		oscanner \
+		smbclient \
+		smbmap \
+		smtp-user-enum \
+		sslscan \
+		tnscmd10g \
+		whatweb \
+		python3-pip
+RUN 	apt-get -y autoremove
+RUN		python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
+
 
 ADD https://raw.githubusercontent.com/ParrotSec/parrot-core/master/parrot-core/root/.bashrc /root/.bashrc
 
