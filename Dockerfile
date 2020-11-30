@@ -18,7 +18,9 @@ RUN		apt-get -y install \
 		dirbuster \
 		gobuster \
 		enum4linux \
-		exploitdb 
+		exploitdb \
+		dirb \
+		openvpn
 RUN		apt-get -y install \
 #		seclists \
 		curl \
@@ -38,7 +40,10 @@ RUN		apt-get -y install \
 		python3-pip
 RUN 		apt-get -y autoremove
 RUN		python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
-RUN		apt-get -y install openvpn
+RUN		apt-get -y install \
+		wordlists \
+		hydra
+RUN		git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git /usr/share/privesc
 
 ADD https://raw.githubusercontent.com/ParrotSec/parrot-core/master/parrot-core/root/.bashrc /root/.bashrc
 
