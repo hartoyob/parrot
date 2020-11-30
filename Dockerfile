@@ -36,9 +36,9 @@ RUN		apt-get -y install \
 		tnscmd10g \
 		whatweb \
 		python3-pip
-RUN 	apt-get -y autoremove
+RUN 		apt-get -y autoremove
 RUN		python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
-
+RUN		apt-get -y install openvpn
 
 ADD https://raw.githubusercontent.com/ParrotSec/parrot-core/master/parrot-core/root/.bashrc /root/.bashrc
 
