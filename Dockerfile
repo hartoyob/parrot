@@ -23,7 +23,8 @@ RUN		apt-get -y install \
 		openvpn \
 		wordlists \
 		webshells \
-		hydra
+		hydra \
+		tmux
 RUN		apt-get -y install \
 #		seclists \
 		curl \
