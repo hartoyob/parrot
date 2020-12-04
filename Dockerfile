@@ -11,6 +11,7 @@ RUN		apt-get -y install \
 		ipcalc \
 		mtr-tiny \
 		vim \
+		nfs-common \
 		man
 RUN		apt-get -y install \
 		metasploit-framework \
