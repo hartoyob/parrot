@@ -42,7 +42,7 @@ RUN		apt-get -y install \
 		tnscmd10g \
 		whatweb \
 		python3-pip
-RUN 		apt-get -y autoremove
+RUN 	apt-get -y autoremove
 RUN		python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
 RUN		git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git /usr/share/privesc
 RUN 	git clone https://github.com/danielmiessler/SecLists.git /usr/share/SecLists
