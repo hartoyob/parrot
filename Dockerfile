@@ -25,7 +25,8 @@ RUN		apt-get -y install \
 		wordlists \
 		webshells \
 		hydra \
-		tmux
+		tmux \
+		wfuzz
 RUN		apt-get -y install \
 #		seclists \
 		curl \
