@@ -6,44 +6,39 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update; apt-get -y dist-upgrade
 RUN		apt-get -y install \
-		socat \
-		netcat \
-		ipcalc \
-		mtr-tiny \
-		vim \
-		nfs-common \
-		man
-RUN		apt-get -y install \
-		metasploit-framework \
-		postgresql \
+		curl \
+		dirb \
 		dirbuster \
-		gobuster \
 		enum4linux \
 		exploitdb \
-		dirb \
-		openvpn \
-		wordlists \
-		webshells \
-		hydra \
-		tmux \
-		wfuzz
-RUN		apt-get -y install \
-#		seclists \
-		curl \
-		enum4linux \
 		gobuster \
+		hydra \
+		ipcalc \
+		man \
+		metasploit-framework \
+		mtr-tiny \
 		nbtscan \
- 		nikto \
+		netcat \
+		nfs-common \
+		nikto \
 		nmap \
 		onesixtyone \
+		openvpn \
 		oscanner \
+		postgresql \
+		python3-pip \
 		smbclient \
 		smbmap \
 		smtp-user-enum \
+		socat \
 		sslscan \
+		tmux \
 		tnscmd10g \
+		vim \
+		webshells \
+		wfuzz \
 		whatweb \
-		python3-pip
+		wordlists 
 RUN 	apt-get -y autoremove
 RUN		python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
 RUN		git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git /usr/share/privesc
