@@ -41,8 +41,8 @@ RUN		apt-get -y install \
 		wordlists 
 RUN 	apt-get -y autoremove
 RUN		python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
-RUN		git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git /usr/share/privesc
-RUN 	git clone https://github.com/danielmiessler/SecLists.git /usr/share/SecLists
-ADD https://raw.githubusercontent.com/ParrotSec/parrot-core/master/parrot-core/root/.bashrc /root/.bashrc
+RUN		git clone --depth 1 https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git /usr/share/privesc
+RUN 	git clone --depth 1 https://github.com/danielmiessler/SecLists.git /usr/share/SecLists
+ADD 	https://raw.githubusercontent.com/ParrotSec/parrot-core/master/parrot-core/root/.bashrc /root/.bashrc
 
 ENTRYPOINT bash $@
