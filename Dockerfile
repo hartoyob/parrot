@@ -32,6 +32,7 @@ RUN		apt-get -y install \
 		smtp-user-enum \
 		socat \
 		sslscan \
+		sqlmap \
 		tmux \
 		tnscmd10g \
 		vim \
