@@ -39,7 +39,8 @@ RUN		apt-get -y install \
 		webshells \
 		wfuzz \
 		whatweb \
-		wordlists 
+		wordlists \
+		zaproxy
 RUN		apt-get -y autoremove
 
 RUN		python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
