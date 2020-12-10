@@ -11,6 +11,7 @@ RUN		apt-get -y install \
 		dirbuster \
 		enum4linux \
 		exploitdb \
+		ftp \
 		gobuster \
 		hydra \
 		ipcalc \
