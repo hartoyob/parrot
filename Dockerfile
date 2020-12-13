@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Install components
 
-RUN		sed -i 's/deb.parrot.sh/mirror.0x.sg/g' /etc/apt/sources.list.d/parrot.list 
+RUN		sed -i 's/https:\/\/deb.parrot.sh/http:\/\/mirror.0x.sg/g' /etc/apt/sources.list.d/parrot.list 
 
 RUN		apt-get update; apt-get -y dist-upgrade
 RUN		apt-get -y install \
