@@ -40,8 +40,8 @@ RUN		apt-get -y install \
 		webshells \
 		wfuzz \
 		whatweb \
-		wordlists \
-		zaproxy
+		wordlists 
+#		zaproxy
 RUN		apt-get -y autoremove
 RUN		python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
 RUN		git clone --depth 1 https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git /usr/share/privesc
