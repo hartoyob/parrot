@@ -4,6 +4,8 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Install components
 
+RUN		sed -i 's/deb.parrot.sh/mirror.0x.sg/g' /etc/apt/sources.list.d/parrot.list 
+
 RUN		apt-get update; apt-get -y dist-upgrade
 RUN		apt-get -y install \
 		curl \
@@ -40,8 +42,8 @@ RUN		apt-get -y install \
 		webshells \
 		wfuzz \
 		whatweb \
-		wordlists 
-#		zaproxy
+		wordlists \
+		zaproxy
 RUN		apt-get -y autoremove
 RUN		python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
 RUN		git clone --depth 1 https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git /usr/share/privesc
