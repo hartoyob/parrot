@@ -22,3 +22,9 @@ To make openvpn works from inside container
 
 To support NFS mount
 `--cap-add=SYS_ADMIN`
+
+In case subnet conflict, create a new docker network and then attach it to the container
+docker network create --driver=bridge --subnet=192.168.2.0/24 --gateway=192.168.2.10 new_subnet
+
+When run the docker, add --network=new_subnet
+so "docker run --network=new_subnet"
