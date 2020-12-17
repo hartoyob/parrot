@@ -17,6 +17,7 @@ RUN		apt-get -y install \
 		gobuster \
 		hydra \
 		ipcalc \
+		lynx \
 		man \
 		metasploit-framework \
 		mtr-tiny \
