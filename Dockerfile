@@ -31,6 +31,7 @@ RUN		apt-get -y install \
 		oscanner \
 		postgresql \
 		python3-pip \
+		radare2 \
 		smbclient \
 		smbmap \
 		smtp-user-enum \
