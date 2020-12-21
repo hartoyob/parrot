@@ -14,6 +14,7 @@ RUN		apt-get -y install \
 		enum4linux \
 		exploitdb \
 		ftp \
+		ffuf \
 		gobuster \
 		hydra \
 		ipcalc \
