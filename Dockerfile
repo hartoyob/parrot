@@ -52,6 +52,8 @@ RUN		python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
 RUN		git clone --depth 1 https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git /usr/share/privesc
 RUN		git clone --depth 1 https://github.com/danielmiessler/SecLists.git /usr/share/SecLists
 
+RUN		sed -i 's/^\#.*$//g' /usr/share/SecLists/Discovery/Web-Content/directory-list-*.txt && sed -i  '/^$/d' /usr/share/SecLists/Discovery/Web-Content/directory-list-*.txt
+
 ADD		https://raw.githubusercontent.com/ParrotSec/parrot-core/master/parrot-core/root/.bashrc /root/.bashrc
 
 ENTRYPOINT bash $@
