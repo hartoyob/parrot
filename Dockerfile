@@ -18,6 +18,7 @@ RUN		apt-get -y install \
 		gobuster \
 		hydra \
 		ipcalc \
+		impacket-scripts \
 		lynx \
 		man \
 		metasploit-framework \
