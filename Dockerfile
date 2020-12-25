@@ -25,6 +25,7 @@ RUN		apt-get -y install \
 		mtr-tiny \
 		nbtscan \
 		netcat \
+		net-tools \
 		nfs-common \
 		nikto \
 		nmap \
