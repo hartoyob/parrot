@@ -45,6 +45,7 @@ RUN		apt-get -y install \
 		socat \
 		sslscan \
 		sqlmap \
+		squid \
 		tmux \
 		tnscmd10g \
 		vim \
@@ -56,7 +57,7 @@ RUN		apt-get -y autoremove
 RUN		python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
 RUN		git clone --depth 1 https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git /usr/share/privesc
 RUN		git clone --depth 1 https://github.com/danielmiessler/SecLists.git /usr/share/SecLists
-
+RUN		sed -i 's/#http/http/' /etc/squid/conf.d/debian.conf
 RUN		sed -i 's/^\#.*$//g' /usr/share/SecLists/Discovery/Web-Content/directory-list-*.txt && sed -i  '/^$/d' /usr/share/SecLists/Discovery/Web-Content/directory-list-*.txt
 RUN		curl -L https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64 -o /usr/bin/kerbrute && chmod a+x /usr/bin/kerbrute
 RUN		gem install evil-winrm
